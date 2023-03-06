@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quiz Me</string>
+    <string name="logo_desc">Logo of the app</string>
+    <string name="exit">Exit</string>
+    <string name="start">Start Quiz</string>
+    <string name="score">Score</string>
+</resources>

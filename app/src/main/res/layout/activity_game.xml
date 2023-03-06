@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".GameActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_game" />
+
+    <TextView
+        android:id="@+id/questionTxt"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/question_bg"
+        android:gravity="center"
+        android:text="questions"
+        android:textColor="@color/primaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/queCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/number_text_bg"
+        android:padding="8dp"
+        android:text="2 / 10"
+        android:textColor="@color/primaryDark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <TextView
+        android:id="@+id/questionMark"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="165dp"
+        android:background="@drawable/mark_bg"
+        android:gravity="center"
+        android:text="?"
+        android:textColor="@color/primaryDark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/queCount" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        android:paddingVertical="8dp"
+        android:text="optionA"
+        android:textColor="@color/primaryDark"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionMark"
+        app:strokeColor="@color/primaryDark"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="8dp"
+        android:text="optionB"
+        android:textColor="@color/primaryDark"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionA"
+        app:strokeColor="@color/primaryDark"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="8dp"
+        android:text="optionC"
+        android:textColor="@color/primaryDark"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionB"
+        app:strokeColor="@color/primaryDark"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/optionD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="8dp"
+        android:text="optionD"
+        android:textColor="@color/primaryDark"
+        android:textSize="18sp"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionC"
+        app:strokeColor="@color/primaryDark"
+        app:strokeWidth="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
