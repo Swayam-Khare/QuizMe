@@ -27,7 +27,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(sqLiteDatabase);
     }
 
-    public long insertQuestion(String question, String ans, String optA, String optB, String optC, String optD){
+    /**
+     * Method to insert a question in the database along with its answer and options
+     *
+     * @param question is the question String to be inserted
+     * @param ans      is the answer of the question
+     * @param optA     is the first option
+     * @param optB     is the second option
+     * @param optC     is the third option
+     * @param optD     is the fourth option
+     */
+    public void insertQuestion(String question, String ans, String optA, String optB, String optC, String optD){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -38,14 +48,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(Question.COLUMN_C, optC);
         values.put(Question.COLUMN_D, optD);
 
-        long id = db.insert(Question.TABLE_NAME, null, values);
+        db.insert(Question.TABLE_NAME, null, values);
         db.close();
 
-        return id;
     }
 
+    /**
+     * Method to retrieve the question by passing its row id in the database
+     * @param id is the id of the row in which the question resides
+     * @return the Question object containing the question String along with its answer and options
+     */
     public Question getQuestion(long id){
         SQLiteDatabase db = this.getReadableDatabase();
+
+        // Query: SELECT * FROM questions WHERE que_id = id
         Cursor cursor = db.query(Question.TABLE_NAME,
                 new String[]{Question.COLUMN_ID,
                         Question.COLUMN_QUE,
@@ -65,6 +81,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor != null) {
             cursor.moveToFirst();
 
+            // Creating a Question object by passing in the values from the cursor.
             question = new Question(
                     cursor.getInt(cursor.getColumnIndexOrThrow(Question.COLUMN_ID)),
                     cursor.getString(cursor.getColumnIndexOrThrow(Question.COLUMN_QUE)),

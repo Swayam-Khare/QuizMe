@@ -8,6 +8,9 @@ import android.os.Handler;
 
 import com.swayam.quizme.db.DatabaseHelper;
 
+/**
+ * This Activity is for the splash screen that appears when the app is opened
+ */
 public class SplashActivity extends AppCompatActivity {
 
     DatabaseHelper dbHelper;
@@ -21,8 +24,10 @@ public class SplashActivity extends AppCompatActivity {
 
         insertAllQuestions();
 
+        // Intent to start the MainActivity
         Intent i = new Intent(this, MainActivity.class);
 
+        // Launching the MainActivity automatically after 1500 ms and closing this Activity
         Handler handler = new Handler();
         handler.postDelayed(() -> {
             startActivity(i);
@@ -31,6 +36,9 @@ public class SplashActivity extends AppCompatActivity {
         }, 1500);
     }
 
+    /**
+     * This method inserts all the questions along with their answers and options in the Database.
+     */
     private void insertAllQuestions() {
         dbHelper.insertQuestion(
                 "What is a ^ a?",
