@@ -9,8 +9,8 @@ To set up the project in your environment:
 1. Make sure you have Android Studio installed in it.
 1. Make sure you have JDK 11 or latest installed in it.
 1. Fork the repository.
-1. clone the repo in your local machine.
-1. Opem Android Studio and Open the cloned project.
+1. Clone the repo in your local machine.
+1. Open Android Studio and Open the cloned project.
 1. Wait for the Gradle build to finish.
 1. Resolve the errors, if any.
-1. You're good to go
+1. You're good to go.
