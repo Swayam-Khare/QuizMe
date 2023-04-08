@@ -106,7 +106,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
      */
     @Override
     public void onClick(View view) {
-        Button btnPressed = (Button) view;
+        Button btnPressed = (Button) view; // Typecasting the view to Button
         disableButtons();  // Disable the buttons to stop user from selecting multiple answers
 
         // Reset the color of the option buttons and show the next question
